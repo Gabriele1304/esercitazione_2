@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+  <title>Polibagram</title>
+</head>
+<body>
+<div id="container">
+  <aside id="side-menu">
+    <ul>
+      <li><a href="/"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a href="/"><i class="fa-solid fa-circle-plus"></i>Nuovo post</a></li>
+      <li><a href="/"><i class="fa-solid fa-user"></i>Profilo</a></li>
+      <li><a href="/"><i class="fa-solid fa-gear"></i>Impostazioni</a></li>
+    </ul>
+  </aside>
+  <main id="main-content">
+    <div id="post-container">
+      <figure class="post">
+        <img src="bari.jpg" />
+        <div class="post-description">
+          <div class="author-description">
+            <span class="author">canarino</span><span class="description">come sono bello!</span>
+          </div>
+          <div class="comments">
+            <div class="comment">
+              <span class="author">danielle</span><span class="description">che bella questa foto!!!</span>
+            </div>
+            <div class="comment">
+              <span class="author">sciueferrara</span><span class="description">quittate il web</span>
+            </div>
+            <div class="comment input">
+              <form action="/" method="post">
+                <input type="text" placeholder="Aggiungi un commento..." />
+              </form>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </main>
+  <aside id="side-sponsor">
+    SPONSOR
+  </aside>
+</div>
+</body>
+</html>

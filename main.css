@@ -1,0 +1,103 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+#container {
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+#side-menu {
+    flex: 0 245px;
+    border-inline-end: 1px solid rgb(230, 230, 230);
+    margin-inline: 10px;
+    padding-inline-end: 10px;
+}
+
+#main-content {
+    flex: 3 800px;
+    display: flex;
+    justify-content: center;
+}
+
+#side-sponsor {
+    flex: 1 350px;
+}
+
+#side-menu > ul {
+    list-style: none;
+    gap: 10px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 30px;
+}
+
+#side-menu li {
+    display: block;
+    border-radius: 30px;
+}
+
+#side-menu li:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+#side-menu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+.post {
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 450px;
+}
+
+.post img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.post input[type=text] {
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    margin-top: 10px;
+    background: none;
+    border: none;
+}
+
+.post input[type=text]:focus {
+    outline: none;
+}
+
+.post-description {
+    margin-top: 10px;
+}
+
+.post-description .author {
+    font-weight: 600;
+    margin-right: 0.25em;
+}
+
+.post-description .comments {
+    margin-top: 10px;
+}
+
+i.fa-solid {
+    margin-right: 10px;
+    font-size: 18px;
+}

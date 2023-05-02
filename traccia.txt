@@ -1,0 +1,23 @@
+Esercitazione 2
+Si consideri la pagina Web inclusa all'interno dei file del progetto. L'obiettivo di questa esercitazione è quello di popolare dinamicamente i post della pagina Web e poter inserire nuovi commenti (non saranno salvati).
+
+Creazione della classe Post
+Similmente alla classe Present dell'Esercizio 6.8, ogni post deve essere realizzato come un'istanza di una classe Post. Il costruttore della classe Post dovrà essere in grado di ricevere un oggetto contenente le informazioni sul post e di realizzare gli elementi HTML necessari per il suo rendering. Inoltre, lo stesso costruttore dovrà posizionare il nuovo post all'interno della pagina Web. Si faccia in modo, quindi, che il costruttore accetti un nodo elemento (dove posizionerà il post) e un oggetto contenente le informazioni sul post.
+
+Si consideri che il contenitore per tutti i post sarà #post-container, e ciascun post dovrà essere strutturato come nella pagina HTML allegata. Si ricorda che:
+
+un nodo elemento può essere creato in JavaScript mediante l'API document.createElement;
+l'attributo di un nodo elemento può essere specificato mediante il metodo .setAttribute del nodo stesso;
+il metodo .appendChild di un nodo può essere utilizzato per "appendere" un nodo figlio;
+la proprietà .textContent di un nodo elemento può essere utilizzata per controllare il nodo testo figlio del nodo elemento, mentre la proprietà .innerHTML permette di controllare direttamente il contenuto HTML di un nodo elemento.
+Popolamento dinamico della pagina
+Le informazioni sui post da visualizzare potranno essere recuperate mediante Fetch API da un JSON disponibile all'URL https://api.jsonbin.io/v3/b/6450eaf9b89b1e22999564c9?meta=false. È necessario guardare la struttura del file JSON per capire come popolare i contenuti degli oggetti Post.
+
+Inoltre, si noti che i commenti ad un post sono inseriti in un array nella proprietà comments del relativo post. Pertanto, sarà necessario invocare, per ognuno dei commenti, una funzione capace di renderizzare il contenuto dello specifico commento.
+
+Aggiunta di un nuovo commento
+Per l'aggiunta di un nuovo commento, si aggiunga un apposito metodo alla classe Post che venga invocato come callback dell'evento submit del form per l'inserimento di un commento. Il metodo dovrà creare un nuovo commento (come gerarchia di elementi HTML come da template allegato), e dovrà quindi inserirlo all'interno dell'elemento HTML atto a contenere i commenti dello specifico post.
+
+Si ricorda che sarà necessario prevenire il comportamento di default sull'evento submit.
+
+L'autore del nuovo commento dovrà corrispondere all'utente loggato. In particolare, si può scegliere di utilizzare una variabile globale atta a contenere tale informazione. Opzionalmente, si può creare nella pagina una textbox in cui è possibile modificare il nome dell'utente loggato (che vada quindi a cambiare il contenuto della variabile globale).
